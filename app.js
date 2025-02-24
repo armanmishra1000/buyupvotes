@@ -420,6 +420,11 @@ app.get('/health', (req, res) => {
     res.status(200).send('OK');
 });
 
+// Add this new route
+app.get('/', (req, res) => {
+  res.send('Welcome to the buyupvotes.io API server!');
+});
+
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/contact", contactRoutes);
